@@ -24,6 +24,7 @@ RUN \
     && echo 'bin/ke.sh start' >> entrypoint.sh \
     && echo 'sleep 3' >> entrypoint.sh \
     && echo 'tail -f logs/ke_console.out' >> entrypoint.sh \
+    && mkdir logs \
     && touch logs/ke_console.out
 
 ENTRYPOINT ["sh", "./entrypoint.sh"]
